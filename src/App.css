@@ -1,0 +1,197 @@
+/* =================================== */
+/*          GLOBAL STYLES              */
+/* =================================== */
+
+/* --- CSS Variables (Theme) --- */
+:root {
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #212529;
+  --subtle-text-color: #6c757d;
+  --border-color: #dee2e6;
+  --primary-accent: #6741d9;
+  --primary-accent-hover: #5f3dc4;
+  --chart-color-1: #748ffc;
+  --chart-color-2: #40c057;
+}
+
+/* --- Body & Defaults --- */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =================================== */
+/*          MAIN LAYOUT                */
+/* =================================== */
+
+.app-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+
+/* =================================== */
+/*          COMPONENTS                 */
+/* =================================== */
+
+/* --- Chart Card --- */
+.chart-card {
+  background-color: var(--card-background);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.chart-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.chart-description {
+  font-size: 0.9rem;
+  color: var(--subtle-text-color);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+
+/* --- Interaction & Controls Panel --- */
+.interaction-panel {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.interaction-panel label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--subtle-text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.interaction-panel input[type="range"] {
+  accent-color: var(--primary-accent);
+}
+
+.interaction-panel select {
+  font-family: 'Inter', sans-serif;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+}
+
+
+/* --- Top N Genre Selector --- */
+.top-n-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.top-n-selector span {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--subtle-text-color);
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.top-n-selector button {
+  font-family: 'Inter', sans-serif;
+  border: none;
+  background-color: transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.top-n-selector button:hover {
+  background-color: #e9ecef;
+}
+
+.top-n-selector button.active {
+  background-color: var(--primary-accent);
+  color: white;
+  font-weight: 500;
+}
+
+
+/* --- Scatter Plot Specifics --- */
+.definitions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+}
+
+.feature-definition {
+  padding: 0.75rem 1rem;
+  background-color: var(--background-color);
+  border-left: 3px solid var(--primary-accent);
+  font-size: 0.85em;
+  color: var(--subtle-text-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.feature-definition strong {
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.custom-tooltip {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-tooltip .tooltip-title {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.custom-tooltip .tooltip-item {
+  font-size: 0.9em;
+  margin: 5px 0 0 0;
+  color: var(--subtle-text-color);
+}
