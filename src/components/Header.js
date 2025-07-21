@@ -5,7 +5,9 @@ function Header({ onLanguageChange, language, portfolioLink }) {
         <header>
             <nav className="navbar navbar-expand-lg bg-light shadow-sm">
                 <div className="container">
-                    <a className="navbar-brand fs-4" href="#"><i className="bi bi-music-note-beamed me-2"></i> Spotify Data</a>
+                    <a className="navbar-brand fs-4" href={portfolioLink}>
+                        <i className="bi bi-music-note-beamed me-2"></i> Spotify Data
+                    </a>
                     <div className="ms-auto d-flex align-items-center">
                         <div className="language-selector nav-item me-3">
                             <button 
@@ -23,7 +25,7 @@ function Header({ onLanguageChange, language, portfolioLink }) {
                                 Français
                             </button>
                         </div>
-                        <a href={"https://yuyangliu2004.github.io/YuYangLiuPortfolio.github.io/"} className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
+                        <a href={portfolioLink} className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
                             <i className="bi bi-person-circle me-2"></i>
                             My Portfolio
                         </a>
