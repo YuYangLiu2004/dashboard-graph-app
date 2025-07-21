@@ -23,7 +23,7 @@ function Header({ onLanguageChange, language, portfolioLink }) {
                                 Français
                             </button>
                         </div>
-                        <a href={portfolioLink} className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
+                        <a href={"https://yuyangliu2004.github.io/YuYangLiuPortfolio.github.io/"} className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
                             <i className="bi bi-person-circle me-2"></i>
                             My Portfolio
                         </a>
